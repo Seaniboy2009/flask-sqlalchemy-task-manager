@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="light-blue-text text-darken-4 center-align">Categories</h3>
+<h3 class="green-text center-align">Categories</h3>
 
 <div class="row">
     <div class="col s12 center-align">
-        <a href="{{ url_for('add_category') }}" class="btn-large light-blue darken-2">
+        <a href="{{ url_for('add_category') }}" class="btn-large blue-grey darken-2">
             Add Category <i class="fas fa-plus-square right"></i>
         </a>
     </div>
@@ -18,7 +18,7 @@
                 <span class="card-title">{{ category.category_name }}</span>
             </div>
             <div class="card-action">
-                <a href="#" class="btn green">Edit</a>
+                <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn green">Edit</a>
                 <a href="#" class="btn red">Delete</a>
             </div>
         </div>
